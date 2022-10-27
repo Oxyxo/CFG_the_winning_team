@@ -28,12 +28,23 @@ response_API = requests.get(
     f"https://api.themoviedb.org/3/search/movie?api_key=91b59d00685f5ec6b4534a4b11ae1ffb&page=1&query={title_with_hyphen}")
 data = response_API.json()
 
+movie_list = []
+movie_id = 0
+list_number = 1
+
+for movie in data["results"]:
+    movie_list.append(f"{list_number}. " + data["results"][movie_id]["original_title"])
+    movie_id += 1
+    list_number += 1
+print("\n".join(movie_list))
 
 for movie in data["results"]:
     try:
         print_movie_result(movie)
     except:
         continue
+
+
 
 overview_for_chosen = input("About which movie would you like to read?\n")
 print(overview_for_chosen)
