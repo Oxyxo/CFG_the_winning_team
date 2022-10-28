@@ -46,12 +46,12 @@ for movie in data["results"]:
 
 
 
-overview_for_chosen = input("About which movie would you like to read?\n")
-print(overview_for_chosen)
-hyphen = overview_for_chosen.replace(" ", "-")
-from_API = requests.get(
-    f"https://api.themoviedb.org/3/search/movie?api_key=91b59d00685f5ec6b4534a4b11ae1ffb&page=1&query={hyphen}")
-print(data["results"][0]["overview"])
+overview_for_chosen = input("About which movie would you like to read? Give me a number from the list^\n")
+number = int(overview_for_chosen) - 1
+
+print(data["results"][number]["original_title"])
+print(data["results"][number]["overview"])
+
 
 
 
