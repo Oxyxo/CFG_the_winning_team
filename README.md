@@ -1,2 +1,3 @@
 # CFG_the_winning_team
-Project for CFG Python course, a web scraper in python
+
+A small tool that could be used to fetch information about your favorite movies.
