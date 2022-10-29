@@ -49,9 +49,7 @@ for movie in data["results"]:
 overview_for_chosen = input("About which movie would you like to read? Give me a number from the list^\n")
 number = int(overview_for_chosen) - 1
 
-print(data["results"][number]["original_title"])
+print(data["results"][number]["original_title"] +" "+ data["results"][number]["release_date"][0:4])
 print(data["results"][number]["overview"])
-
-
 
 
