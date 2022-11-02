@@ -40,12 +40,6 @@ while True:
         movie_id += 1
     print("\n".join(movie_list))
 
-    # for movie in data["results"]:
-    #     try:
-    #         print_movie_result(movie)
-    #     except:
-    #         continue
-
     overview_for_chosen = input("About which movie would you like to read? Give me a number from the list^\n")
     if overview_for_chosen == ":q":
         break
